@@ -823,6 +823,24 @@ body {
     color: var(--secondary-color);
 }
 
+.whatsapp-link {
+    display: inline-block;
+    background: #25D366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.whatsapp-link:hover {
+    background: #1fa857;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
 .info-block.highlight {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
     border-left-color: var(--secondary-color);

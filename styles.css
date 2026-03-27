@@ -148,6 +148,9 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 10000;
+    position: relative;
+    padding: 8px;
 }
 
 .hamburger span {
@@ -156,6 +159,7 @@ body {
     background: var(--text-dark);
     border-radius: 3px;
     transition: var(--transition);
+    display: block;
 }
 
 /* ============================================
@@ -918,14 +922,43 @@ body {
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
+        visibility: visible !important;
+        z-index: 10000;
     }
 
     .nav-menu {
-        display: none !important;
-        position: static;
-        flex-direction: row;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
         margin-left: 0;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 100%;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .nav-menu.open {
+        display: flex !important;
+    }
+
+    .nav-menu.closed {
+        display: none !important;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: block;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
     }
 
     .hero {
@@ -1003,6 +1036,45 @@ body {
         padding-top: 70px;
     }
 
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        z-index: 10000;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        margin-left: 0;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 100%;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .nav-menu.open {
+        display: flex !important;
+    }
+
+    .nav-menu.closed {
+        display: none !important;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
     .hero-title {
         font-size: 28px;
     }
@@ -1018,11 +1090,6 @@ body {
 
     .section-title {
         font-size: 24px;
-    }
-
-    .nav-menu {
-        display: none !important;
-        margin-left: 0;
     }
 
     .cta-button {

@@ -207,26 +207,30 @@ if (contactForm) {
             return;
         }
         
-        // Prepare mailto link
-        const subject = `New Contact Request from ${name}`;
-        const body = `
+        // Prepare WhatsApp message
+        const whatsappMessage = `Hi, I'm interested in Glowtic Solutions' services.
+
+*Contact Details:*
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
-Service Interested In: ${service || 'Not specified'}
+Service: ${service || 'Not specified'}
 
-Message:
+*Message:*
 ${message}
-        `.trim();
+
+Looking forward to your response!`;
         
-        // Encode mailto link
-        const mailtoLink = `mailto:glowticsolutions@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // Encode WhatsApp message
+        const whatsappLink = `https://wa.me/919677591607?text=${encodeURIComponent(whatsappMessage)}`;
         
         // Show success message
-        showFormMessage('Thank you for your message! We will get back to you shortly.', 'success');
+        showFormMessage('✓ Opening WhatsApp to send your message...', 'success');
         
-        // Open email client (for demo purposes)
-        // window.location.href = mailtoLink;
+        // Open WhatsApp after a short delay
+        setTimeout(() => {
+            window.open(whatsappLink, '_blank');
+        }, 500);
         
         // Reset form
         contactForm.reset();

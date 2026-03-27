@@ -222,7 +222,7 @@ ${message}
 Looking forward to your response!`;
         
         // Encode WhatsApp message
-        const whatsappLink = `https://wa.me/919677591607?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappLink = `https://wa.me/919342860367?text=${encodeURIComponent(whatsappMessage)}`;
         
         // Show success message
         showFormMessage('✓ Opening WhatsApp to send your message...', 'success');
@@ -470,4 +470,4 @@ if (statsSection) {
 
 console.log('%c🌟 Welcome to Glowtic Solutions! 🌟', 'font-size: 20px; color: #6366f1; font-weight: bold;');
 console.log('%cYour Digital Marketing Partner', 'font-size: 14px; color: #ec4899;');
-console.log('%cContact: glowticsolutions@gmail.com | Phone: +91 96775 91607', 'font-size: 12px; color: #6b7280;');
+console.log('%cContact: glowticsolutions@gmail.com | Phone: +91 9342860367', 'font-size: 12px; color: #6b7280;');

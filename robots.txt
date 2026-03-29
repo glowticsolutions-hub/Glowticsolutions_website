@@ -2,14 +2,34 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Crawl-delay: 1
 
-Sitemap: https://glowticsolutions.com/sitemap.xml
-
-# Specific rules for major search engines
+# Specific rules for Googlebot (higher priority)
 User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-User-agent: Bingbot
+# Specific rules for other search engines
+User-agent: Slurp
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://glowticsolutions.com/sitemap.xml
+
+# Local Business Information
+# Location: Trichy, Tamil Nadu, India
+# Service Areas: Trichy, Madurai, Chennai, Tamil Nadu, India
+# Contact: +91 9342860367
+# Email: glowticsolutions@gmail.com

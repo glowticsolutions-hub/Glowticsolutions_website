@@ -313,6 +313,96 @@ body {
     background-clip: text;
 }
 
+.client-hero {
+    padding: 100px 20px 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(236, 72, 153, 0.06));
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+.client-banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+}
+
+.client-chips,
+.brands-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.client-chip,
+.brand-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
+.brand-pill {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.08));
+    border-color: transparent;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.branch-card {
+    background: var(--bg-light);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.branch-card-inner {
+    padding: 30px 25px;
+}
+
+.branch-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.branch-card p {
+    color: var(--text-light);
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+.map-embed {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+}
+
+.client-footer-cta {
+    margin-top: 35px;
+}
+
+.client-footer-cta .secondary-btn {
+    padding: 14px 36px;
+}
+
 /* ============================================
    SERVICES PREVIEW SECTION
    ============================================ */
@@ -847,6 +937,40 @@ body {
     color: white !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 16px 40px rgba(37, 211, 102, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-float-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .info-block.highlight {
